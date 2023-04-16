@@ -22,7 +22,6 @@ VALUES ('Киллиан', 'Мерфи', 'муж.', 46),
 SELECT *
 FROM employee;
 
-
 -- Измените одну запись полностью
 UPDATE employee
 SET first_name = 'Мэттью',
@@ -41,3 +40,4 @@ WHERE id = 2;
 
 SELECT *
 FROM employee;
+
