@@ -19,7 +19,9 @@ VALUES ('Киллиан', 'Мерфи', 'муж.', 46),
        ('Мэтт', 'Леблан', 'муж.', 54);
 
 -- Получите все записи из базы
-SELECT * FROM employee;
+SELECT *
+FROM employee;
+
 
 -- Измените одну запись полностью
 UPDATE employee
@@ -29,16 +31,13 @@ SET first_name = 'Мэттью',
     age        = 53
 WHERE first_name = 'Мэтт';
 
-SELECT * FROM employee;
+SELECT *
+FROM employee;
 
 -- Удалите одну запись из базы
-DELETE FROM employee WHERE id = 2;
+DELETE
+FROM employee
+WHERE id = 2;
 
-SELECT * FROM employee;
-
-
-
-
-
-
-
+SELECT *
+FROM employee;
