@@ -27,9 +27,6 @@ VALUES ('Москва'),
        ('Сеул'),
        ('Лондон');
 
-SELECT *
-FROM employee;
-
 -- назначьте работникам соответствующие города
 UPDATE employee SET city_id = (SELECT city_id FROM city WHERE city_name ='Лондон') WHERE id = 1;
 UPDATE employee SET city_id = (SELECT city_id FROM city WHERE city_name ='Вашингтон') WHERE id = 3;
@@ -39,3 +36,7 @@ UPDATE employee SET city_id = (SELECT city_id FROM city WHERE city_name ='Сеу
 
 SELECT *
 FROM employee;
+
+-- после заполнения для уже существующих полей атрибута city_name можно наложить ограничение NOT NULL
+ALTER TABLE employee
+    ALTER COLUMN city_id SET NOT NULL;
